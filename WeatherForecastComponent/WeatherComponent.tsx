@@ -16,7 +16,7 @@ const WeatherComponent: React.FC<WeatherComponentProps> = ({ forecastData }) => 
                 {forecastData.map((dayForecast, index) => (
                     <Card key={index} id="card">
                         <CardPreview>
-                            <Text id="day-of-week">{new Date(dayForecast.dt * 1000).toLocaleDateString('en-US', { weekday: 'long' })}</Text>
+                            <Text id="day-of-week">{new Date(dayForecast.dt * 1000).toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase()}</Text>
                             <Text id="date">{new Date(dayForecast.dt * 1000).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' })}</Text>
                             <Image src={dayForecast.weather[0]?.icon ? `http://openweathermap.org/img/wn/${dayForecast.weather[0].icon}.png` : ''} alt="Weather icon" id="weather-icon" />
                             <Text id="temperature">{typeof dayForecast.main.temp === 'number' ? (dayForecast.main.temp - 273.15).toFixed(0) : 'N/A'} °C</Text>
