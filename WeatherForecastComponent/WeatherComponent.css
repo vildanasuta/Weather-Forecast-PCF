@@ -10,7 +10,7 @@
 
 
 #card {
-    width: 13%;
+    width: 14%;
     height:auto;
     background-image: linear-gradient(to bottom, #4ccab9, #ee8036);
     color: white;
@@ -91,27 +91,4 @@
     background-repeat: no-repeat;
     color: white;
     width: 100%;
-}
-
-@media (max-width: 768px) {
-    .card {
-        width: 150px;
-    }
-
-    .weather-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .day-of-week {
-        font-size: 16px;
-    }
-
-    .date {
-        font-size: 14px;
-    }
-
-    .temperature {
-        font-size: 20px;
-    }
 }
