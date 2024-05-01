@@ -4,55 +4,86 @@
     gap: 10px; 
     justify-content: center; 
     align-items: center; 
+    color: white;
+    margin-bottom:10%;
 }
 
 
-.forecast-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#card {
+    width: 13%;
+    height:auto;
+    background-image: linear-gradient(to bottom, #4ccab9, #ee8036);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #fff;
+    padding: 4%;
 }
 
-.day-of-week {
+#weather-icon {
+    width: 50x;
+    height: 50px;
+    justify-content: center; 
+    align-items: center; 
+    margin-left: 25%;
+    filter: drop-shadow(2px 2px 4px #fff); 
+}
+#card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+#day-of-week, #date, #temperature, #weather-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Regular */
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+#title, #cityNameTitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700; /* Bold */
+    text-align: center;
+    margin: 20px 0;
+}
+
+#day-of-week {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: white;
+}
+
+#date {
+    font-style: italic;
+    margin-bottom: 4px;
+    color: white;
+}
+
+#temperature {
     font-weight: bold;
     font-size: 24px;
+    margin-bottom: 4px;
+    color: white;
 }
 
-.date {
-    font-style: italic;
-}
-
-.weather-icon {
-    width: 50px;
-    height: 50px;
-}
-
-.temperature {
-    font-weight: bold;
-    font-size: 36px;
-}
-
-.weather-description {
-    margin-top: 8px;
+#weather-description {
+    margin-top: 4px;
+    color: white;
 }
 
 #title {
-    width: 100%; 
+    width: 100%;
+    text-align: center;
 }
 
-#card{
-    padding:3%;
-    width: 10%;
-    background-image: linear-gradient(to bottom, #4ccab9, #ee8036);
-    color: #fff; 
+#cityNameTitle {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
     margin-bottom: 5%;
-    box-shadow: 0 4px 8px #fff;
 }
 
-#searchButton{
-    background-color: #4ccab9;
-}
-#parentDiv{
+#parentDiv {
     position: relative;
     overflow: hidden;
     background-image: url("./img/bg.png");
@@ -62,26 +93,25 @@
     width: 100%;
 }
 
-#searchField{
-    width:50%;
-    margin:3%;
+@media (max-width: 768px) {
+    .card {
+        width: 150px;
+    }
+
+    .weather-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .day-of-week {
+        font-size: 16px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+
+    .temperature {
+        font-size: 20px;
+    }
 }
-
-#searchField {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 300px;
-    transition: border-color 0.3s ease;
-  }
-  
-  #searchField:focus {
-    outline: none;
-    border-color: dodgerblue;
-    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
-  }
-
-  #form{
-    width:100%;
-  }
